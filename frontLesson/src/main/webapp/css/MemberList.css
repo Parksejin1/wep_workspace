@@ -12,7 +12,7 @@ th,td{
     }
     
 .header {
-	padding: 90px 10px 10px 10px;
+	
 	height: 20%;
 	background-color: blue;
 	color : white;
@@ -23,6 +23,7 @@ th,td{
 	align-items: center;
 	/*수평정렬*/
 	justify-content: center;
+	 margin: auto;
 }
 
 .nav{

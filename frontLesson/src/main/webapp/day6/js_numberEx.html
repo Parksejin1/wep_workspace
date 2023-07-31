@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트의 number</title>
+<link rel ="styleshest"
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body style="padding : 20px;">
+<h3>자바스크립트 산술 계산기</h3>
+<div class= "form-group row">
+<div class= "col-xs-2">
+	<label for="operand1"><small>(피연산자)</small>1</label>
+	<input class="form-contorol" id="operand1" type="text">
+</div>
+<div class= "col-xs-2">
+	<label for="operator"><small> operator</small>(연산자)</label>
+	<select id="operator" class= "form-group row">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">÷</option>
+</select>
+</div>
+</div>
+
+<div class= "col-xs-2">
+	<label for="operand2">operand<small>(피연산자)</small>2</label>
+	<input class="form-contorol" id="operand2" type="text">
+	</div>
+	<div class= "col-xs-2">
+	<button id="executeBtn" class="btn btn-success btn-xs">실행</button>결과
+	<input class="form-contorol" id="result" type="text">
+	</div>
+	<!-- input 요소들이 form 태그없이 사용됩니다. 이유는 이예제는 서버에 데이터를 제출하지않음-->
+<script type="text/javascript" src="../js/js_numberEx.js"></script>
+	
+	
+</body>
+</html>
