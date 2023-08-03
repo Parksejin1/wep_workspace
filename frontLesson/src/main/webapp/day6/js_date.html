@@ -81,16 +81,41 @@
        //함수를 정의해보기 날짜 Date , 기호를 인자로 받아서 날짜 문자열 리턴 . 예시:2023-07-31
        
       function dateFormat(vdate,symbol){
-    	  today = new Date('2022-03-02')
-    	  let year = today.getFullYear()
-          let month = today.getMonth()+1
-          let dates = today.getDate().toString().padStart(2,'0')
+    	  const year = vdate.getFullYear()
+          const month = (vdate.getMonth()+1).toString().padStart(2,'0')
+          const dates = vdate.getDate().toString().padStart(2,'0')
          let result = [year,month,dates].join(symbol)
-           return result;
+           return result
           
        }
        //실행
-      document.write(dateFormat(new Date(2022,3,2),'/')) // 2022/03/02출력하기
+      document.write('<br>')
+      document.write('date formate 함수 정의 테스트<br>')
+      document.write(dateFormat(new Date(2022,3,2),'/')) // 2022/04/02출력하기
+      let tesrdate = '2023-08-11'     //input type=date 일때 value 문자열 형식
+      document.write('<br>')
+      document.write(dateFormat(new Date(tesrdate),'-')) 
+      
+
+let myArray = [1, 2, 3, 4, 5];
+myArray.push(6); 
+let lastElement = myArray.pop(); 
+let firstElement = myArray.shift(); 
+myArray.unshift(0); 
+myArray.splice(2, 1); 
+let newArray = myArray.slice(1, 3); 
+let index = myArray.indexOf(4);
+myArray.forEach((element) => console.log(element)); 
+let multipliedArray = myArray.map((element) => element * 2); 
+let filteredArray = myArray.filter((element) => element > 2); 
+
+console.log("Modified Array:", myArray);
+console.log("Last Element:", lastElement);
+console.log("First Element:", firstElement);
+console.log("New Array:", newArray);
+console.log("Index of 4:", index);
+console.log("Multiplied Array:", multipliedArray);
+console.log("Filtered Array:", filteredArray);
 
 </script>
 </body>

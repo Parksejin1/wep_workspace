@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{width: 800px;}
+	th{ width: 13%; background-color:tomato; color:white;}
+	td{width: 10%;}
+	th,td{border: 1px solid tomato; padding: 7px 12px; text-align: center;}
+		
+</style>
+</head>
+<body>
+<hr>
+<h4>오늘의 스케줄</h4>
+
+ <table>
+ 		<tr>
+ 		<th>TIME</th>
+ 		<th>TODO</th>
+ 		</tr>
+     <tbody id="contents">
+     <!-- 오브젝트 배열의 요소값을 가져다가 tr태그 1개 행 만들기를 배열 요소만큼 반복 -->
+      
+ </tbody>
+ </table>
+<hr>
+
+   <button id="todoAdd">스케줄 추가하기</button>
+   <button id="srotBtn">시간정렬 하기</button>
+
+<script type="text/javascript">
+   const schedules = [{time:'09:00',todo:'수업'}
+   ,{time:'11:00',todo:'과제'}
+   ,{time:'12:30',todo:'점심 식사'}
+   ,{time:'14:00',todo:'주간회의'}
+   ,{time:'16:45',todo:'자료조사'}
+   ]
+   
+   
+   let result=''
+   setView()
+   /*
+        const 로 선언한 함수는 호출하기 전에 미리 정의가 되어 있어야합니다.
+        function 정의한 함수는 자바스크립트에서 함수 끌어올리기(함수 hoisting) function 정의는 맨앞으로
+        
+   */
+   function setView(){
+	   result=''
+   schedules.forEach((object)=>{
+	   console.log(object)
+	   console.log(object.time) 
+	   console.log(object.todo) 
+	   result+=`<tr><td>${object.time}</td>
+	   <td>${object.todo}</td><tr>`
+	   
+   })
+   document.getElementById('contents').innerHTML=result
+   }
+   
+  
+   
+   document.getElementById('todoAdd').addEventListener('click',()=>{
+			
+			const atime = prompt('시간을 입력하세요')
+			const atodo = prompt('할일을 입력하세요')	
+			const temp = {time:atime,todo:atodo}
+			schedules.push(temp)       //배열 마지막 요소로 추가
+			const newtr = document.createElement('tr') //새로운 태그요소 생성하기
+			const newtd =`<td>${atime}</td>	
+				   <td>${atodo}</td>`
+				   newtr.innerHTML=newtd	//newtr은 새로만든 1)tr 태그요소 newtd는 문자열
+				   document.getElementById('contents').appendChild(newtr)
+				   // tbody(id=contments) 마지막자식 요소로 tr 태그 추가하기
+   })
+   			
+     document.getElementById('srotBtn').addEventListener('click',function(){
+		//배열의 sort 는 문자열 사전순 정렬, 정수값 정렬은 sort 안에 콜백함수 정의 return a-b;(예시)
+		// cinsole.log('09:00'-'11:00')    //NaN , return a.time-b.time 는 NaN 입니다
+    	 schedules.sort((a,b)=>{	//a,b는 객체
+    		//a,b 중에 작은값이 무엇인지 정렬 알고리즘이 알수 있도록 리턴 설정
+    		 if(a.time<b.time)	//a,b 객체의 time 프로퍼티비교(시간순정렬)
+    			 return -1
+    			 else return 1
+    	 })
+		console.log(schedules)
+		
+	    	setView()
+   })  
+ 
+
+</script>
+
+</body>
+</html>
