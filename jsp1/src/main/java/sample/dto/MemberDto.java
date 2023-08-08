@@ -8,13 +8,17 @@ import java.sql.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 @ToString
 @Getter
+@Setter
 @AllArgsConstructor
 @Builder
+
 public class MemberDto {
 
+	
 	private int custno;
 	private String custname;
 	private String phone;
@@ -22,6 +26,10 @@ public class MemberDto {
 	private Date joindate;
 	private String grade;
 	private String city;
+	
+	public MemberDto() {
+		
+	}
 	
 	
 }
