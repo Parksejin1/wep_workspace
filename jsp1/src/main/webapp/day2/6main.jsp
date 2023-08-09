@@ -15,7 +15,7 @@
 </jsp:include>
 <main>
 <h3>::::::::::: Main:::::::::</h3>
-	<a href="9useBean.jsp?myname=김땡땡&age=24">useBean 테스트</a><br>
+	<a href="12useBean.jsp?myname=김땡땡&age=24">useBean 테스트</a><br>
 	<form action="9useBean.jsp">
 	<input placeholder="이름" name="myname">
 	<input placeholder="나이" name="age">

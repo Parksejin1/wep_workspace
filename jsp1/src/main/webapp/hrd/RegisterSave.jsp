@@ -16,7 +16,7 @@
     //파라미터 가져오기
 
 	 
- 
+    request.setCharacterEncoding("UTF-8");
 	MemberDao dao = MemberDao.getMemberDao();
     dao.insert(test);	//db  테이블에 반영된 것 확인하기
 %>

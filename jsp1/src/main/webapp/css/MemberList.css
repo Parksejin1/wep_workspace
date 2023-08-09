@@ -1,0 +1,78 @@
+@charset "UTF-8";
+th,td{
+   border: 1px solid black;
+   padding: 10px 10px;
+   text-align: center;
+  
+   }
+   
+    table{
+   border-collapse: collapse; 
+   margin: auto;
+    }
+    
+.header {
+	padding: 90px 10px 10px 10px;
+	height: 20%;
+	background-color: blue;
+	color : white;
+	box-sizing: border-box;
+	/* flexbox 레이아웃으로 자식 요소를 정렬하기 */
+	display: flex;
+	/*수직정렬*/
+	align-items: center;
+	/*수평정렬*/
+	justify-content: center;
+}
+
+.nav{
+	box-sizing: border-box;
+	height: 7%;
+	
+	
+}
+
+html,body{
+	
+	height: 100%;
+	margin: 0;
+}
+ul{
+	list-style: none;
+	background-color: aqua;
+	margin: 0px;
+	/* 자식 li에 flot 속성을 지정했을 떄 필요합니다*/
+	overflow: hidden;
+	height: 100%;	
+}
+.nav a{
+	text-decoration: none;
+	 padding :  20px;
+	 display : inline-block;
+}
+
+.nav li{
+	float : left;	
+}
+
+td:nth-child(1){
+	color : white;
+}
+
+.section {
+	box-sizing: border-box;
+	padding: 30px;
+	height: 66%;
+	background-color: gray;	
+	text-align: center;
+	margin: 0px;
+}
+.footer {
+	box-sizing: border-box;
+	padding: 1px;
+	height: 7%;
+	background-color: cornfLowerblue;
+	color : white;
+	font-size: 80%;
+	text-align: center;
+}
