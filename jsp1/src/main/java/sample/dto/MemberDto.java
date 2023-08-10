@@ -27,6 +27,7 @@ public class MemberDto {
 	private String grade;
 	private String city;
 	
+	
 	public MemberDto() {
 		
 	}

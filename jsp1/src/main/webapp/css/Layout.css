@@ -5,7 +5,7 @@ body{
 }
 /* 블록요소의 width 는 기본이 화면의 100% 
 height는 컨턴츠 크기만큼 padding로 정하기*/
-.header {
+header {
 	padding: 40px 20px;
 	background-color: blue;
 	color : white;
@@ -43,7 +43,6 @@ ul{
 	/*컨텐츠 내용만큼 높이만 지정되는것을 최소높이 지정하여 바꾸기*/
 	min-height: 547px;
 }
-
 .footer {
 	padding:10px;
 	background-color: cornfLowerblue;
