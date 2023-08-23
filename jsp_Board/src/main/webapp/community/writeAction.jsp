@@ -8,7 +8,7 @@
 	pageEncoding="UTF-8"%>
 <!-- 수정된 내용 db 테이블에 저장하기 -->
 <%
-request.setCharacterEncoding("UTF-8");
+// request.setCharacterEncoding("UTF-8");
 
 BookUser writer = (BookUser) session.getAttribute("user");
 // 아래 작성자는 문제점을 발견하기 의한 추가 사항이고 나중에는 삭제합니다. 아래와 같이하면 세션 비교 코드 필요함
